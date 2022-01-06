@@ -2,6 +2,20 @@ import random
 import time
 from replit import db
 
+
+def add(num1, num2):
+  return num1 + num2
+
+def subtract(num1, num2):
+  return num1 + num2
+
+def multiply(num1, num2):
+  return num1 + num2
+
+def divide(num1, num2):
+  return num1 + num2
+
+
 def find24(num1, num2, num3, num4):
   base_list = [num1, num2, num3, num4]
   print(f"Input: {base_list}")
@@ -31,3 +45,4 @@ def find24(num1, num2, num3, num4):
 print(time.time())
 find24(1, 3, 5, 7)
 print("The file ran!")
+print(time.time())
