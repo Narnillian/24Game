@@ -1,7 +1,11 @@
 import random
 import time
-from replit import db
-
+try:
+  #if replit is not available, do not try to log
+  from replit import db
+  has_replitdb = True
+except:
+  has_replitdb = False
 
 def add(num1, num2):
   return num1+num2
@@ -36,16 +40,18 @@ def find24(num1, num2, num3, num4):
       combos.append(this_set)
     print(f"len(combos): {len(combos)}")
     if len(combos) == 24:
-      db[f"shuffler_ iterations{time.time()}"] = iterations
+      if has_replitdb:
+        db[f"shuffler_ iterations{time.time()}"] = iterations
       break
   
   print(combos)
-
+  
+  iterations = 0
   while True:
     iterations+=1
     print(f"Operator shuffler iterations: {iterations}")
     unique = True
-    Operators
+    operators = [add,subtract,multiply,divide]
     this_set = []
     random.shuffle(this_set)
     for i in combos:
@@ -54,8 +60,9 @@ def find24(num1, num2, num3, num4):
     if unique:
       combos.append(this_set)
     print(f"len(combos): {len(combos)}")
-    if len(combos) == 24:
-      db[f"shuffler_ operator_iterations{time.time()}"] = iterations
+    if len(combos) == 256:
+      if has_replitdb:
+        db[f"shuffler_ operator_iterations{time.time()}"] = iterations
       break
 
 
