@@ -65,7 +65,6 @@ def find24(num1, num2, num3, num4):
       if has_replitdb:
         db[f"shuffler_ operator_iterations{time.time()}"] = iterations
       break
-    print()
 
 
 print(time.time())
