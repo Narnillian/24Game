@@ -24,6 +24,7 @@ def find24(num1, num2, num3, num4):
   base_list = [num1, num2, num3, num4]
   print(f"Input: {base_list}")
   combos = []
+  operator_combos = []
 
   iterations=0
   #randomize the set over and over until I have the correct number of variations  
@@ -43,7 +44,6 @@ def find24(num1, num2, num3, num4):
       if has_replitdb:
         db[f"shuffler_ iterations{time.time()}"] = iterations
       break
-  
   print(combos)
   
   iterations = 0
@@ -53,14 +53,15 @@ def find24(num1, num2, num3, num4):
     unique = True
     operators = [add,subtract,multiply,divide]
     this_set = []
-    random.shuffle(this_set)
-    for i in combos:
+    for i in range(4):
+      this_set.append(operators[random.randrange(4)])
+    for i in operator_combos:
       if this_set == i:
         unique = False
     if unique:
-      combos.append(this_set)
-    print(f"len(combos): {len(combos)}")
-    if len(combos) == 256:
+      operator_combos.append(this_set)
+    print(f"len(operator_combos): {len(operator_combos)}")
+    if len(operator_combos) == 256:
       if has_replitdb:
         db[f"shuffler_ operator_iterations{time.time()}"] = iterations
       break
