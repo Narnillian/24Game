@@ -2,10 +2,12 @@ import random
 import time
 try:
   #if replit is not available, do not try to log
+  # UNCOMMENT: fail to stop replitdb
   from replit import db
   has_replitdb = True
 except:
   has_replitdb = False
+print(f"We have access to the Replit database: {has_replitdb}")
 
 def add(num1, num2):
   return num1+num2
@@ -53,7 +55,7 @@ def find24(num1, num2, num3, num4):
     unique = True
     operators = [add,subtract,multiply,divide]
     this_set = []
-    for i in range(4):
+    for i in range(3):
       this_set.append(operators[random.randrange(4)])
     for i in operator_combos:
       if this_set == i:
@@ -61,7 +63,7 @@ def find24(num1, num2, num3, num4):
     if unique:
       operator_combos.append(this_set)
     print(f"len(operator_combos): {len(operator_combos)}")
-    if len(operator_combos) == 256:
+    if len(operator_combos) == 64:
       if has_replitdb:
         db[f"shuffler_ operator_iterations{time.time()}"] = iterations
       break
