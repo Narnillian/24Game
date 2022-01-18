@@ -17,7 +17,7 @@ It will probably be changed pretty drastically.
 Imported packages: `random`, `time`, `replit` (if available - mostly just for me working in Replit)
 This script currently uses a randomizer to get every possible list with the four numbers. You end up with 24  lists inside of a larger list. 24 here has nothing to do with the game. That's the amount of different lists you can have of 4 elements without repeating numbers.
 
-After getting all permutations of the list, the script finds 256 lists of the operators and adds them to a similar list.   256 is the maximum number of different combinations of 4  elements you can have. These lists can use each element more than once.
+After getting all permutations of the list, the script finds 64 lists of the operators and adds them to a similar list.   64 is the maximum number of different combinations of 3  elements you can have. These lists can use each element more than once.
 
 Once the script has both lists, we end the program. Like I said, this is unfinished.
 
