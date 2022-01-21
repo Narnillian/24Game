@@ -3,7 +3,7 @@
 
 Made with GitHub and Replit
 
-It is not my fault Replit uses Poetry and not Pip
+It is not my fault Replit uses Poetry and not Pip or some other package manager along those lines. Maybe it's because the lock file and the .toml is stored in /${HOME}/ instead of some other place. Maybe that's just a custom Replit thing that they could have done with any package manager. Who knows? Anyway,  I have 0 experience with Poetry. I just let Replit deal with it.
 
 ## About the game
 24 game is a mathimatical game where you try to use 4 integers to get to 24. You start with a set such as `[2,4,6,7]`. You use each number exactly once and can use any of the four arithmetical operators (`+`,`-`,`*`,`/`) as many times as you wish to get to 24. In this example, one solution would be `(2 * 7) + (6 + 4)`.  Each number is used once, but `+` is used twice. `-` and `/` are not used at all. The player may use parenthesis to denote the order of operations, and all solutions must be in one line (as shown above).
